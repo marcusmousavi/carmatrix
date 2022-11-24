@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+
+#popupbox{
+    margin: 0; 
+    margin-left: 40%; 
+    margin-right: 40%;
+    margin-top: 50px; 
+    padding-top: 20px; 
+    width: 20%; 
+    height: 300px; 
+    position: absolute; 
+    background: rgba(22,23,21,0.7); 
+    border: solid #000000 0.5px; 
+    border-radius: 25px;
+    z-index: 9; 
+    font-family: arial; 
+    visibility: hidden; 
+    }
+
+    #popupbox #popupbox-label{
+        margin-top:15px;
+        color:rgba(255, 255, 255, 1)
+
+    }
+
+    #popupbox input{
+         margin-top:15px;
+         width: 200px;
+         height: 25px;
+         background: rgba(22,23,21,0);
+         color:white;
+         border: 1px solid white;
+         border-radius: 25px;
+         text-align: center;
+         font-size: 14px;
+    }
+    #popupbox input::after{
+        margin-top:15px;
+        width: 200px;
+        height: 25px;
+        background: rgba(22,23,21,0);
+        color:white;
+        border: 1px solid white;
+        font-size: 14px;
+   }
+/* button to submit user data*/
+    #popupbox button{
+        margin-top:30px; 
+        width: 150px;
+        height: 34.375px;
+        background: rgba(22,23,21,0);
+        color:white;
+        border: 1px solid white; 
+        border-radius: 25px;
+        font-size: 14px; 
+    }
+
+    #popupbox-submit{
+         
+
+    }
+
+
+    #popupbox-cancel{
+           color:white;
+           font-size: 14px;
+    }

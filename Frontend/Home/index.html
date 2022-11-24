@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index_style.css" />
+    <link rel="stylesheet" href="index_style2.css" />
+
+    <title>Car Matrix Model</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="header">
+        <title>Hello</title>
+        <div class="navbar">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="../Account/account.html">Account</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="content-background">
+        <h1></h1>
+        <div class="introduction-container">
+          <p>Find the right car for your next adventure.</p>
+          <button
+            onclick="register('show'), hideButton(this)"
+            class="register-button"
+          >
+            Register Now
+          </button>
+          <div id="popupbox">
+            <form name="login" action="" method="post">
+              <center id="popupbox-label">Username:</center>
+              <center>
+                <input id="username" size="14" />
+              </center>
+              <center id="popupbox-label">Password:</center>
+              <center>
+                <input id="password" type="password" size="14" />
+              </center>
+              <center>
+                <button id="popupbox-submit" type="submit" name="submit">
+                  Register
+                </button>
+              </center>
+              <div id="msg">
+                <pre></pre>
+              </div>
+            </form>
+            <br />
+            <center>
+              <a id="popupbox-cancel" href="javascript:register('hide');"
+                >cancel</a
+              >
+            </center>
+          </div>
+        </div>
+        <div class="info1"></div>
+      </div>
+
+      <div class="block1">
+        <div class="block1-content">
+          <div class="block1-content-header">
+            <h2>Customize</h2>
+            <p>text goes here</p>
+          </div>
+          <div class="block1-content-header">
+            <h2>Compare</h2>
+            <p>text goes here</p>
+          </div>
+          <div class="block1-content-header">
+            <h2>Commit</h2>
+            <p>text goes here</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-background">
+        <h1></h1>
+        <div class="introduction-container">
+          <p></p>
+        </div>
+      </div>
+
+      <div class="block1"></div>
+    </div>
+    <footer>
+      <div class="footer-container footer-all">
+        <div class="footer">
+          <div class="footer-heading footer-1">
+            <h2>About Us</h2>
+            <a href="#">Blog</a>
+            <a href="#">Demo</a>
+            <a href="#">Customers</a>
+            <a href="#">Investors</a>
+            <a href="#">Terms of Services</a>
+          </div>
+          <div class="footer-heading footer-1">
+            <h2>Contact Us</h2>
+            <a href="#">Jobs</a>
+            <a href="#">Support</a>
+            <a href="#">Contact</a>
+            <a href="#">Sponsorships</a>
+          </div>
+          <div class="footer-heading footer-1">
+            <h2>Resources</h2>
+            <a href="#">Blog</a>
+            <a href="#">Demo</a>
+            <a href="#">Customers</a>
+            <a href="#">Investors</a>
+            <a href="#">Terms of Services</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
