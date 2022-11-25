@@ -16,7 +16,7 @@
 //
 // 
 // 
-// 
+// random comment
 
 
 function hideButton(e){
@@ -58,7 +58,7 @@ let users = [];
 
 document.addEventListener("DOMContentLoaded",() => {
     document.getElementById('popupbox-submit').addEventListener('click',logUser)
-       
+
 });
 
 //create case where user is already logged in 
