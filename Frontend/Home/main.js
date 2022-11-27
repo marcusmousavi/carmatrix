@@ -1,4 +1,4 @@
-//Marcus Mousavi - main.js
+   //Marcus Mousavi - main.js
 
 
 // show display if DOM is loaded
