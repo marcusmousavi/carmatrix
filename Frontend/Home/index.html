@@ -17,7 +17,7 @@
           <ul>
             <li><a href="../Home/index.html">Home</a></li>
             <li><a href="../Search/display.html">Search</a></li>
-            <li><a href="../Account/account.html">Account</a></li>
+            <li onclick="register('show');hideButton('start-button')"><a href="#">Account</a></li>
             <li><a href="../About Us/about.html">About Us</a></li>
           </ul>
         </div>
@@ -29,10 +29,10 @@
         <div class="introduction-container">
           <p>Find the right car for your next adventure.</p>
           <button
-            onclick="register('show'), hideButton(this)"
-            class="register-button"
+            onclick="register('show'), hideButton('start-button')"
+            id="start-button"
           >
-            Register Now
+            Start Now
           </button>
           <div id="popupbox">
             <form name="login" action="" method="post">

@@ -1,28 +1,17 @@
    //Marcus Mousavi - main.js
 
 
-// show display if DOM is loaded
-
-// if (document.readyState === "loading"){
-//     document.addEventListener("DOMContentLoaded", register);
-// } else {
-//     register();
-//     console.log(register_button + "dom finished loading");
-//     }
 
 
 
-//hideButton and register need to be combined where function(showhide,e){}
-//
-// 
-// 
-// random comment
+function hideButton(button){
+ // console.log(button + "works");
+ var tmp = document.getElementById(button);
+ tmp.style.display = 'none';
+ console.log(tmp.style)
+ console.log(tmp);
+ //e.style.visibility = 'hidden';
 
-
-function hideButton(e){
-    console.log(e + "works");
-    e.style.display = 'none';
-    //e.style.visibility = 'hidden';
  }
 
 function register(showhide){
@@ -34,26 +23,45 @@ function register(showhide){
     }
 }
 
-//Save logged user data
+function enableSavedUser(){
+
+         //enable saved user settings
+         //welcome (username) back
+         //change register button on welcome... 
+         //...from register to logout 
+         //configure registered table using matching id's
+
+}
+
+                                                    //Save logged user data
 
 let users = [];
     const logUser = (ev) =>{ 
         ev.preventDefault();
+        if(users.some(u => users.includes(u.ID))) { //look for user in DB later
+                                                    //enable saved user settings
+                                                    //welcome (username) back
+                                                    //change register button on welcome... 
+                                                    //...from register to logout   
+
+        }
+        else{  
         let user = {
-            IdleDeadline: Date.now(),
+            ID: Date.now(),
             username: document.getElementById("username").value,
             password: document.getElementById("password").value
              };
         users.push(user);
         document.forms[0].reset(); 
-    //display 
+                                                    //print in console
     console.warn('added',{users});
-    // let pre = document.querySelector('#msg pre');
-    // pre.textContent = '\n' + JSON.stringify(users, '\t', 2)
 
-
-    //saving to local storage
+                                                    //saving to local storage
     localStorage.setItem('UsersList', JSON.stringify(users));
+
+                                                    //welcome user
+                                                    //enable saved user settings
+    }
 }
 
 document.addEventListener("DOMContentLoaded",() => {
@@ -61,4 +69,4 @@ document.addEventListener("DOMContentLoaded",() => {
 
 });
 
-//create case where user is already logged in 
+                                                    //create case where user is already logged in 

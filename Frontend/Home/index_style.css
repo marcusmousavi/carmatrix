@@ -121,7 +121,7 @@
     font-size: 32px;
     }
 
-.register-button{
+#start-button{
     position: static;
     background-color: rgba(22,23,21,0.5);
     color: #fff;
