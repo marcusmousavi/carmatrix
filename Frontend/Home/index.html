@@ -16,8 +16,8 @@
         <div class="navbar">
           <ul>
             <li><a href="../Home/index.html">Home</a></li>
-            <li><a href="../Search/display.html">Search</a></li>
-            <li onclick="register('show');hideButton('start-button')"><a href="#">Account</a></li>
+            <li onclick="location.href='../Search/display.html';"><a href="#">Search</a></li>
+            <li onclick="manageAccount('show');triggerStartButton('start-button','hide')"><a href="#">Account</a></li>
             <li><a href="../About Us/about.html">About Us</a></li>
           </ul>
         </div>
@@ -29,8 +29,8 @@
         <div class="introduction-container">
           <p>Find the right car for your next adventure.</p>
           <button
-            onclick="register('show'), hideButton('start-button')"
             id="start-button"
+            onclick="location.href='../Search/display.html';"
           >
             Start Now
           </button>
@@ -55,8 +55,8 @@
             </form>
             <br />
             <center>
-              <a id="popupbox-cancel" href="javascript:register('hide');"
-                >cancel</a
+              <button id="popupbox-cancel" onclick = "manageAccount('hide');triggerStartButton('start-button','show')"
+                >cancel</button
               >
             </center>
           </div>

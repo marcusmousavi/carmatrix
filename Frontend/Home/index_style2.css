@@ -50,7 +50,7 @@
         font-size: 14px;
    }
 /* button to submit user data*/
-    #popupbox button{
+    #popupbox-submit{
         margin-top:30px; 
         width: 150px;
         height: 34.375px;
@@ -68,6 +68,8 @@
 
 
     #popupbox-cancel{
+           background-color: rgba(22,23,21,0);
+           border:none;
            color:white;
            font-size: 14px;
     }

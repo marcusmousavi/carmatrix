@@ -137,7 +137,8 @@
     transition: 1s;
 }  
 
-.register-button:hover {
+#start-button
+:hover {
     transform:scale(1.1);
     background-color: rgb(51, 122, 241, 0.5);
     transition: 0.4s ease-out;

@@ -1,28 +1,48 @@
-   //Marcus Mousavi - main.js
+//Marcus Mousavi - main.js
+
+//Global variables and values
 
 
 
 
 
-function hideButton(button){
+
+//Function Calls
+
+
+
+/////////////////////////////////////////////////////
+function triggerStartButton(button,status){
  // console.log(button + "works");
- var tmp = document.getElementById(button);
- tmp.style.display = 'none';
- console.log(tmp.style)
- console.log(tmp);
- //e.style.visibility = 'hidden';
+    var tmp = document.getElementById(button);
+    if(status == "hide"){
+        tmp.style.display = 'none';
+        console.log(tmp.style)
+        console.log(tmp);
+    }
+    else if (status == "show"){
+        tmp.style.display = ''
 
- }
+    }
+}
+/////////////////////////////////////////////////////
 
-function register(showhide){
+/////////////////////////////////////////////////////
+function manageAccount(showhide){
     if(showhide == "show"){
         document.getElementById('popupbox').style.visibility="visible";
+
+        document.addEventListener("DOMContentLoaded",() => {
+            document.getElementById('popupbox-submit').addEventListener('click',logUser)
+        });
     }   
     else if(showhide == "hide"){
         document.getElementById('popupbox').style.visibility="hidden"; 
     }
 }
+/////////////////////////////////////////////////////
 
+/////////////////////////////////////////////////////
 function enableSavedUser(){
 
          //enable saved user settings
@@ -32,9 +52,10 @@ function enableSavedUser(){
          //configure registered table using matching id's
 
 }
+/////////////////////////////////////////////////////
 
+/////////////////////////////////////////////////////
                                                     //Save logged user data
-
 let users = [];
     const logUser = (ev) =>{ 
         ev.preventDefault();
@@ -63,10 +84,11 @@ let users = [];
                                                     //enable saved user settings
     }
 }
+/////////////////////////////////////////////////////
 
-document.addEventListener("DOMContentLoaded",() => {
-    document.getElementById('popupbox-submit').addEventListener('click',logUser)
+// document.addEventListener("DOMContentLoaded",() => {
+//     document.getElementById('popupbox-submit').addEventListener('click',logUser)
 
-});
+// });
 
                                                     //create case where user is already logged in 
