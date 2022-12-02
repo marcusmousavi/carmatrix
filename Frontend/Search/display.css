@@ -124,11 +124,48 @@
         margin: 0px auto;
         margin-top: 40px;
         width:75%;
+        border: 1px solid #000;
+    }
+
+    .table-settings{
+        margin: 0px auto;
+        border-bottom: solid 1px #000;
     }
 
     .selectionTable{
+        width: 1350px;
+        table-layout: fixed;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        border-radius: 0px;
+        margin-top:40px;
+        margin-left:40px;
+        margin-right:40px;
+        margin-bottom: 20px;
+    }
+    .selectionTable th,td{
         border: 1px solid #000;
-        border-radius: 12.5px;
+        width:100%;
+        column-span: all;
+    }
+    .displayTable{
+        width: 1350px;
+        table-layout: fixed;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        border-radius: 0px;
+        margin-top:0px;
+        margin-left:40px;
+        margin-right:40px;
+        margin-bottom: 20px;
+    }
+    .displayTable th, td{  
+            border: 1px solid #000;
+            width:100%;
+            column-span: all;
+            text-align: left;
+            padding: 8px;
+            margin-right: 20px;
     }
 
 #start-button{
