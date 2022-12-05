@@ -1,17 +1,18 @@
 //Marcus Mousavi - main.js
 
-
-
-
 //Global variables and values
 
 
 
-//Functions
+
+
+
+//Function Calls
+
 
 
 /////////////////////////////////////////////////////
-function hideStartButton(status,button){
+function triggerStartButton(button,status){
  // console.log(button + "works");
     var tmp = document.getElementById(button);
     if(status == "hide"){
@@ -27,29 +28,13 @@ function hideStartButton(status,button){
 /////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////
-function manageAccount(showhide,managementType){
+function manageAccount(showhide){
     if(showhide == "show"){
         document.getElementById('popupbox').style.visibility="visible";
 
         document.addEventListener("DOMContentLoaded",() => {
             document.getElementById('popupbox-submit').addEventListener('click',logUser)
         });
-
-        if(managementType == 'log-in'){
-
-            document.getElementById('popupbox-sign-up-header').style.display='none';
-            document.getElementById('popupbox-sign-up').style.display='none';
-            document.getElementById('popupbox-log-in-header').style.display='';   // Unlike visibility,display = 'none' does not have an opposite so you can just make it ''
-            document.getElementById('popupbox-log-in').style.display=''; 
-        }
-        if (managementType == 'sign-up'){
-
-            document.getElementById('popupbox-log-in-header').style.display='none';
-            document.getElementById('popupbox-log-in').style.display='none';
-            document.getElementById('popupbox-sign-up-header').style.display='';
-            document.getElementById('popupbox-sign-up').style.display=''; 
-
-        }        
     }   
     else if(showhide == "hide"){
         document.getElementById('popupbox').style.visibility="hidden"; 
@@ -79,6 +64,7 @@ let users = [];
                                                     //welcome (username) back
                                                     //change register button on welcome... 
                                                     //...from register to logout   
+
         }
         else{  
         let user = {

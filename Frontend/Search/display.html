@@ -4,88 +4,160 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="display.css" />
-
     <title>Display Page</title>
   </head>
-
   <body>
     <header>
       <div id="header">
         <title>Display Page</title>
         <div class="navbar">
+          <div>
           <ul>
-            <li><a href="../Home/index.html">Home</a></li>
+            <li onclick="location.href='../Home/index.html';"><a>Home</a></li>
             <li onclick="location.href='../Search/display.html';"><a href="#">Search</a></li>
-            <li onclick="manageAccount('show');triggerStartButton('start-button','hide')"><a href="#">Account</a></li>
-            <li><a href="../About Us/about.html">About Us</a></li>
+            <li onclick="location. href='../About Us/about.html';"><a>About Us</a></li>
           </ul>
+          </div>
+
+          <div>
+            <ul id="account-buttons">
+              <li onclick="manageAccount('show');triggerStartButton('start-button','hide')"><a href="#">Log in</a></li>
+              <li><a href="#">|</a></li>
+              <li onclick="manageAccount('show');triggerStartButton('start-button','hide')"><a href="#">Sign up</a></li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </header>
     <div class="content">
       <div class="content-background-1">
-        
         <div class="introduction-container">
-            <h1>Select Your Dream Car</h1>
+          <h1>Select Your Dream Car</h1>
+        </div>
+        <div class="selectionTable-container">
+          <div>
+            <table class="table-settings">
+              <tr>
+                <th style="border-right: solid 1px #000;">&nbsp;General&nbsp;&nbsp;</th>
+                <th>&nbsp;Advanced</th>
+              </tr>
+            </table>
           </div>
-
-          <div class="selectionTable-container">
-
-                <div>
-                    <table class="table-settings">
-                        <tr>
-                          <th style="border-right: solid 1px #000;">&nbsp;General&nbsp;&nbsp;</th>
-                          <th>&nbsp;Advanced</th>
-                        </tr>
-                      </table>
-                </div>
-
-                <div class="selectionTable"> 
-                    <table>
-                        <tr>
-                          <th>Metric</th>
-                          <th>Priority</th>
-                        </tr>
-                        <tr>
-                          <td>–</td>
-                          <td>–</td>
-                        </tr>
-                        <tr>
-                          <td>–</td>
-                          <td>–</td>
-                        </tr>
-                      </table>
-                </div>
-                <div class="displayTable"> 
-                    <table>
-                        <tr>
-                          <th>Make</th>
-                          <th>Model</th>
-                          <th>Year</th>
-                          <th>Color</th>
-                        </tr>
-                        <tr>
-                          <td colspan="1">Volvo</td>
-                          <td colspan="1">S60</td>
-                          <td colspan="1">2022</td>
-                          <td colspan="1">Sweden</td>
-                        </tr>
-                        <tr>
-                          <td>Honda</td>
-                          <td>Civic</td>
-                          <td>2019</td>
-                          <td>Japan</td>
-                        </tr>
-                      </table>
-            </div>
-          </div>  
-
+          <div class="selectionTable">
+            <table cellspacing="0">
+              <tr>
+                <th id="col1">Metric</th>
+                <th id="col2">Priority</th>
+              </tr>
+              <tr>
+                <td th id="col1">Price Range</td>
+                <td>
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td th id="col1">MPG</td>
+                <td>
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td th id="col1">Maintenance Cost</td>
+                <td>
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td th id="col1">Type of Car</td>
+                <td>
+                  <div class="dropdown">
+                    <button class="dropbtn"><img src="../Misc/arrowDown.png alt=""> &nbsp;</button>
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="selectionTable">
+            <table cellspacing="0">
+              <tr>
+                <th id="col1">Metric</th>
+                <th id="col2">Priority</th>
+              </tr>
+              <tr>
+                <td th id="col1">Price Range</td>
+                <td>
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td th id="col1">MPG</td>
+                <td>
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td th id="col1">Maintenance Cost</td>
+                <td>
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td th id="col1">Unused Category</td>
+                <td>
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <button id="submitQueryButton">Query Button</button>
+          </div>
+          <div class="displayTable">
+            <table cellspacing="0">
+              <tr>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Color</th>
+              </tr>
+              <tr>
+                <td colspan="1">Volvo</td>
+                <td colspan="1">S60</td>
+                <td colspan="1">2022</td>
+                <td colspan="1">Sweden</td>
+              </tr>
+              <tr>
+                <td>Honda</td>
+                <td>Civic</td>
+                <td>2019</td>
+                <td>Japan</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
-  
-
-
-      <div class="block1"></div>
+    </div>
+    <div class="block1"></div>
     </div>
     <footer>
       <div class="footer-container footer-all">

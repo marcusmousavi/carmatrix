@@ -14,12 +14,23 @@
       <div id="header">
         <title>Hello</title>
         <div class="navbar">
-          <ul>
-            <li><a href="../Home/index.html">Home</a></li>
-            <li onclick="location.href='../Search/display.html';"><a href="#">Search</a></li>
-            <li onclick="manageAccount('show');triggerStartButton('start-button','hide')"><a href="#">Account</a></li>
-            <li><a href="../About Us/about.html">About Us</a></li>
+
+          <div>
+            <ul>
+              <li onclick="location.href='../Home/index.html';"><a>Home</a></li>
+              <li onclick="location.href='../Search/display.html';"><a>Search</a></li>
+              <li onclick="location. href='../About Us/about.html';"><a>About Us</a></li>
+            </ul>
+            </div>
+
+          <div>
+          <ul id="account-buttons">
+            <li onclick="manageAccount('show','log-in');hideStartButton('hide','start-button')"><a id="log-in" href="#">Log in</a></li>
+            <li><a href="#">|</a></li>
+            <li onclick="manageAccount('show','sign-up');hideStartButton('hide','start-button')"><a id="sign-up" href="#">Sign up</a></li>
           </ul>
+          </div>
+
         </div>
       </div>
     </header>
@@ -36,6 +47,8 @@
           </button>
           <div id="popupbox">
             <form name="login" action="" method="post">
+              <h1 id="popupbox-log-in-header">Log in</h1>
+              <h1 id="popupbox-sign-up-header">Create account</h1>
               <center id="popupbox-label">Username:</center>
               <center>
                 <input id="username" size="14" />
@@ -55,8 +68,18 @@
             </form>
             <br />
             <center>
-              <button id="popupbox-cancel" onclick = "manageAccount('hide');triggerStartButton('start-button','show')"
-                >cancel</button
+              <div>
+              <button id="popupbox-log-in" onclick = "manageAccount('show','sign-up');hideStartButton('hide','start-button')">
+                No account? <a href='#'><u>Sign Up</u></a>
+              </button>
+              <button id="popupbox-sign-up" onclick = "manageAccount('show','log-in');hideStartButton('hide','start-button')">
+                Have an account? <a href='#'><u>Log In</u></a>
+              </button>
+              </div>
+            </center>
+            <center>
+              <button id="popupbox-cancel" onclick = "manageAccount('hide');hideStartButton('show','start-button')"
+                ><u>Cancel</u></button
               >
             </center>
           </div>
@@ -68,15 +91,15 @@
         <div class="block1-content">
           <div class="block1-content-header">
             <h2>Customize</h2>
-            <p>text goes here</p>
+            <p>Prioritize on what's unique to you.</p>
           </div>
           <div class="block1-content-header">
             <h2>Compare</h2>
-            <p>text goes here</p>
+            <p>Explore options and understand trade-offs.</p>
           </div>
           <div class="block1-content-header">
             <h2>Commit</h2>
-            <p>text goes here</p>
+            <p>Decide on your next purchase.</p>
           </div>
         </div>
       </div>
